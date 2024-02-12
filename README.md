@@ -1,5 +1,16 @@
 # ODISE: Open-Vocabulary Panoptic Segmentation with Text-to-Image Diffusion Models
 
+
+This repo is the modified version of ODISE for experimentation at Spector.
+
+So far, following changes have been made.
+
+odise/model_zoo/model_zoo.py modified. get_config_file hardcoded with file path (for use on GCP VM). 
+please modify this to work in your environment.
+
+in several files, np.bool (no longer supported by numpy) changed to bool as the datatype.
+
+
 **ODISE**: **O**pen-vocabulary **DI**ffusion-based panoptic **SE**gmentation exploits pre-trained text-image diffusion and discriminative models to perform open-vocabulary panoptic segmentation.
 It leverages the frozen representation of both these models to perform panoptic segmentation of any category in the wild. 
 
