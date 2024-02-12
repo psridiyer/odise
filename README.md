@@ -10,6 +10,9 @@ please modify this to work in your environment.
 
 in several files, np.bool (no longer supported by numpy) changed to bool as the datatype.
 
+detectron2/data/transforms/transform.py  contains PIL.Image.LINEAR (depcrecated) - change to BILINEAR or Resampling.BILINEAR 
+
+
 
 **ODISE**: **O**pen-vocabulary **DI**ffusion-based panoptic **SE**gmentation exploits pre-trained text-image diffusion and discriminative models to perform open-vocabulary panoptic segmentation.
 It leverages the frozen representation of both these models to perform panoptic segmentation of any category in the wild. 
