@@ -86,9 +86,16 @@ def get_config_file(config_path):
     Returns:
         str: the real path to the config file.
     """
+    temp_fix_base = "/home/producepics2020/ODISE/configs/"
+    print ('incoming path name', config_path)
+    tmp_fix = "Panoptic/odise_label_coco_50e.py"
+    """
     cfg_file = pkg_resources.resource_filename(
-        "odise.model_zoo", os.path.join("configs", config_path)
+        "odise.model_zoo", os.path.join("/home/producepics2020/ODISE/configs/",tmp_fix)
     )
+    """
+    cfg_file = os.path.join("/home/producepics2020/ODISE/configs/", tmp_fix)
+    print ("****", cfg_file)
     if not os.path.exists(cfg_file):
         raise RuntimeError("{} not available in Model Zoo!".format(config_path))
     return cfg_file
